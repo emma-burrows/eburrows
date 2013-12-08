@@ -1,0 +1,114 @@
+@font-face { 
+  font-family: Alba; 
+  src: url("ALBA____.TTF")
+}
+
+html, body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  -moz-box-sizing: border-box;
+  font-family: Palatino,'Palatino Linotype',serif;
+
+
+  background-attachment: scroll, scroll, scroll, scroll, scroll, scroll, fixed;
+  background-clip: border-box, border-box, border-box, border-box, border-box, border-box, border-box;
+  background-color: #0033CC;
+  background-origin: padding-box, padding-box, padding-box, padding-box, padding-box, padding-box, padding-box;
+  background-position: 0 0px, 0 0px, 0 110px, -130px -170px, 130px 370px, 0 0px, 0 0;
+  background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, repeat;
+  background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
+  
+  /*CSS3*/
+  background-image: radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.3) 32%, rgba(255, 255, 255, 0) 33%), radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.3) 13%, rgba(255, 255, 255, 0) 14%), radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 17%, rgba(255, 255, 255, 0.43) 19%, rgba(255, 255, 255, 0) 20%), radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.2) 13%, rgba(255, 255, 255, 0) 14%), linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0B1284 50%, #760EA1 60%, #83096E 70%, #840B2A 80%, #B13E12 90%, #E27412 100%);
+
+  /*mozilla*/
+  background-image: -moz-radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.3) 32%, rgba(255, 255, 255, 0) 33%), -moz-radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.3) 13%, rgba(255, 255, 255, 0) 14%), -moz-radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 17%, rgba(255, 255, 255, 0.43) 19%, rgba(255, 255, 255, 0) 20%), -moz-radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), -moz-radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), -moz-radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.2) 13%, rgba(255, 255, 255, 0) 14%), -moz-linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0B1284 50%, #760EA1 60%, #83096E 70%, #840B2A 80%, #B13E12 90%, #E27412 100%);
+  
+  /*webkit*/
+  background-image: -webkit-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.3) 32%, rgba(255, 255, 255, 0) 33%), -webkit-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.0976563) 11%, rgba(255, 255, 255, 0.296875) 13%, rgba(255, 255, 255, 0) 14%), -webkit-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.199219) 17%, rgba(255, 255, 255, 0.429688) 19%, rgba(255, 255, 255, 0) 20%), -webkit-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), -webkit-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), -webkit-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.2) 13%, rgba(255, 255, 255, 0) 14%), -webkit-linear-gradient(45deg, rgb(52, 55, 2) 0%, rgb(24, 69, 0) 20%, rgb(24, 117, 70) 30%, rgb(0, 103, 130) 40%, rgb(11, 18, 132) 50%, rgb(118, 14, 161) 60%, rgb(131, 9, 110) 70%, rgb(132, 11, 42) 80%, rgb(177, 62, 18) 90%, rgb(226, 116, 18) 100%);
+
+  /*ms*/
+  background-image: -ms-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.3) 32%, rgba(255, 255, 255, 0) 33%), -ms-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.0976563) 11%, rgba(255, 255, 255, 0.296875) 13%, rgba(255, 255, 255, 0) 14%), -ms-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.199219) 17%, rgba(255, 255, 255, 0.429688) 19%, rgba(255, 255, 255, 0) 20%), -ms-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), -ms-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), -ms-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.2) 13%, rgba(255, 255, 255, 0) 14%), -ms-linear-gradient(45deg, rgb(52, 55, 2) 0%, rgb(24, 69, 0) 20%, rgb(24, 117, 70) 30%, rgb(0, 103, 130) 40%, rgb(11, 18, 132) 50%, rgb(118, 14, 161) 60%, rgb(131, 9, 110) 70%, rgb(132, 11, 42) 80%, rgb(177, 62, 18) 90%, rgb(226, 116, 18) 100%);
+  
+  /*opera*/
+  background-image: -o-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.3) 32%, rgba(255, 255, 255, 0) 33%), -o-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.0976563) 11%, rgba(255, 255, 255, 0.296875) 13%, rgba(255, 255, 255, 0) 14%), -o-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.199219) 17%, rgba(255, 255, 255, 0.429688) 19%, rgba(255, 255, 255, 0) 20%), -o-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), -o-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), -o-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.2) 13%, rgba(255, 255, 255, 0) 14%), -o-linear-gradient(45deg, rgb(52, 55, 2) 0%, rgb(24, 69, 0) 20%, rgb(24, 117, 70) 30%, rgb(0, 103, 130) 40%, rgb(11, 18, 132) 50%, rgb(118, 14, 161) 60%, rgb(131, 9, 110) 70%, rgb(132, 11, 42) 80%, rgb(177, 62, 18) 90%, rgb(226, 116, 18) 100%);
+  
+}
+
+
+
+#container {
+  min-height: 100%;
+  position: relative;
+}
+
+#bodydiv, #heading {
+  padding: 10px;
+}
+  
+#bodydiv {
+  padding-bottom: 90px; /* height of footer */
+}
+
+section {
+  border-radius: 20px;
+  background-color: #A999A9;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+}
+  section h1 {
+    margin: 0px;
+    font-family: Alba;
+    font-weight: normal;
+    font-size: 2em;
+  }
+  #bodydiv section h1 {
+    cursor: pointer;
+  }
+  section h1 > span {
+    font-size: 0.5em;
+  }
+
+ 
+#heading h1 {
+  font-size: 3em;
+  cursor: normal;
+}
+#footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  height: 90px;
+}
+#footer section {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: small;
+}
+
+a, a:link, a:visited {
+  color: #993366;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+img {
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 4px 5px rgba(0,0,0,.6), inset 0 1px 0 rgba(0,0,0,.6);
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 4px 5px rgba(0,0,0,.6), inset 0 1px 0 rgba(0,0,0,.6);
+	box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 4px 5px rgba(0,0,0,.6), inset 0 1px 0 rgba(0,0,0,.6);
+
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+  vertical-align: middle;
+}

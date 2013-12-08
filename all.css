@@ -1,0 +1,31 @@
+body {
+  -moz-box-sizing: border-box;
+  font-family: Palatino,'Palatino Linotype',serif;
+
+
+  background-attachment: scroll, scroll, scroll, scroll, scroll, scroll, fixed;
+  background-clip: border-box, border-box, border-box, border-box, border-box, border-box, border-box;
+  background-color: #0033CC;
+  background-origin: padding-box, padding-box, padding-box, padding-box, padding-box, padding-box, padding-box;
+  background-position: 0 0px, 0 0px, 0 110px, -130px -170px, 130px 370px, 0 0px, 0 0;
+  background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, repeat;
+  background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
+  
+  /*CSS3*/
+  background-image: radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.3) 32%, rgba(255, 255, 255, 0) 33%), radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.3) 13%, rgba(255, 255, 255, 0) 14%), radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 17%, rgba(255, 255, 255, 0.43) 19%, rgba(255, 255, 255, 0) 20%), radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.2) 13%, rgba(255, 255, 255, 0) 14%), linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0B1284 50%, #760EA1 60%, #83096E 70%, #840B2A 80%, #B13E12 90%, #E27412 100%);
+
+  /*mozilla*/
+  background-image: -moz-radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.3) 32%, rgba(255, 255, 255, 0) 33%), -moz-radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.3) 13%, rgba(255, 255, 255, 0) 14%), -moz-radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 17%, rgba(255, 255, 255, 0.43) 19%, rgba(255, 255, 255, 0) 20%), -moz-radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), -moz-radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), -moz-radial-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.2) 13%, rgba(255, 255, 255, 0) 14%), -moz-linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0B1284 50%, #760EA1 60%, #83096E 70%, #840B2A 80%, #B13E12 90%, #E27412 100%);
+  
+  /*webkit*/
+  background-image: -webkit-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.3) 32%, rgba(255, 255, 255, 0) 33%), -webkit-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.0976563) 11%, rgba(255, 255, 255, 0.296875) 13%, rgba(255, 255, 255, 0) 14%), -webkit-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.199219) 17%, rgba(255, 255, 255, 0.429688) 19%, rgba(255, 255, 255, 0) 20%), -webkit-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), -webkit-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), -webkit-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.2) 13%, rgba(255, 255, 255, 0) 14%), -webkit-linear-gradient(45deg, rgb(52, 55, 2) 0%, rgb(24, 69, 0) 20%, rgb(24, 117, 70) 30%, rgb(0, 103, 130) 40%, rgb(11, 18, 132) 50%, rgb(118, 14, 161) 60%, rgb(131, 9, 110) 70%, rgb(132, 11, 42) 80%, rgb(177, 62, 18) 90%, rgb(226, 116, 18) 100%);
+
+  /*ms*/
+  background-image: -ms-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.3) 32%, rgba(255, 255, 255, 0) 33%), -ms-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.0976563) 11%, rgba(255, 255, 255, 0.296875) 13%, rgba(255, 255, 255, 0) 14%), -ms-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.199219) 17%, rgba(255, 255, 255, 0.429688) 19%, rgba(255, 255, 255, 0) 20%), -ms-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), -ms-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), -ms-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.2) 13%, rgba(255, 255, 255, 0) 14%), -ms-linear-gradient(45deg, rgb(52, 55, 2) 0%, rgb(24, 69, 0) 20%, rgb(24, 117, 70) 30%, rgb(0, 103, 130) 40%, rgb(11, 18, 132) 50%, rgb(118, 14, 161) 60%, rgb(131, 9, 110) 70%, rgb(132, 11, 42) 80%, rgb(177, 62, 18) 90%, rgb(226, 116, 18) 100%);
+  
+  /*opera*/
+  background-image: -o-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.3) 32%, rgba(255, 255, 255, 0) 33%), -o-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.0976563) 11%, rgba(255, 255, 255, 0.296875) 13%, rgba(255, 255, 255, 0) 14%), -o-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.199219) 17%, rgba(255, 255, 255, 0.429688) 19%, rgba(255, 255, 255, 0) 20%), -o-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), -o-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, rgba(255, 255, 255, 0) 14%), -o-radial-gradient(center, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.2) 13%, rgba(255, 255, 255, 0) 14%), -o-linear-gradient(45deg, rgb(52, 55, 2) 0%, rgb(24, 69, 0) 20%, rgb(24, 117, 70) 30%, rgb(0, 103, 130) 40%, rgb(11, 18, 132) 50%, rgb(118, 14, 161) 60%, rgb(131, 9, 110) 70%, rgb(132, 11, 42) 80%, rgb(177, 62, 18) 90%, rgb(226, 116, 18) 100%);
+  
+}
+
+
