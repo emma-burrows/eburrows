@@ -77,20 +77,20 @@
             <!-- Default content in case the ajax call fails -->
             <ul id="codeproject">
               <li>
-                <p><a href="http://www.codeproject.com/Articles/17123/Using-Raw-Input-from-C-to-handle-multiple-keyboard">Using Raw Input from C# to handle multiple keyboards</a><br />
-                  Windows XP supports multiple keyboards, but by default, the .Net Framework will treat them all as one. This article explains how to use the Windows API Raw Input methods to support multiple keyboards from a C# application.</p>
+                <p><i>Could not retrieve information dynamically, please see link above.</i></p>
               </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h1>Code School</h1>
+          <div class="content">
+            <p>Courses completed at <a href="http://www.codeschool.com/users/emma-burrows">CodeSchool</a>:</p>
+            <!-- Default content in case the ajax call fails -->
+            <ul id="codeschool">
               <li>
-                <p><a href="http://www.codeproject.com/Articles/14485/Low-level-Windows-API-hooks-from-C-to-stop-unwante">Low-level Windows API hooks from C# to stop unwanted keystrokes</a><br/>
-                  Babies and other animals love nothing better than to have a whack at the keyboard, with all sorts of unpredictable results. This application demonstrates how to trap keystrokes before they can do any damage.</p>
-              </li>
-              <li>
-                <p><a href="http://www.codeproject.com/Articles/12863/Sorting-Book-Titles-in-XSLT">Sorting Book Titles in XSLT</a><br/>
-                  An example of using XSL to achieve a custom sort order - in this case, sorting titles by the first word that isn't an article.</p>
-              </li>
-              <li>
-                <p><a href="http://www.codeproject.com/Articles/9698/Simple-XSLT-stylesheet-for-Visual-Studio-NET-XML-d">Simple XSLT stylesheet for Visual Studio .NET XML documentation</a><br/>
-                  A simple XSLT stylesheet to convert a Visual Studio .NET XML document into basic HTML.</p>
+                <p><i>Could not retrieve information dynamically, please see link above.</i></p>
               </li>
             </ul>
           </div>
@@ -119,89 +119,7 @@
 
     <!-- jQuery to call API and RSS feeds -->
     <script src="jquery-1.10.2.min.js"></script>
-    <script type="text/javascript">    
-      var requri = 'https://api.github.com/users/emma-burrows',
-          codeproject = 'http://www.codeproject.com/WebServices/ArticleRSS.aspx?amid=761050';
-
-      $(document).ready(function() {
-
-        collapsibleH1();
-
-        getGitInfo(requri, writeGitInfo);
-
-        getCodeProjectArticles(codeproject, writeCodeProject);
-
-      });
-
-      function collapsibleH1() {
-        var allH1 = $('#bodydiv section h1');
-
-        allH1
-          .prepend('<span>▲</span>')
-          .attr('title', 'Click to collapse');
-
-        $('#bodydiv section h1').click(function (event) {
-          var content = $(this).next('.content'),
-              h1 = $(this);
-
-          if (content.is(':hidden')) {
-            content.slideDown('slow');
-            h1.children('span').remove();
-            h1.prepend('<span>▲</span>')
-              .attr('title', 'Click to collapse');
-          }
-          else {
-            content.slideUp('slow');
-            h1.children('span').remove();
-            h1.prepend('<span>▼</span>')
-              .attr("title", 'Click to expand');
-          }
-          // Stop the link click from doing its normal thing
-          event.preventDefault();
-        });
-      }
-
-      function writeGitInfo(gitinfo) {
-        $('#profile').attr('href', gitinfo.profile);
-        $('#avatar').attr('src', gitinfo.avatar);
-
-        if (gitinfo.reponum > 0) {
-
-          var outhtml = '<strong>' + gitinfo.reponum + ' repositories:</strong>';
-          getGitRepos(requri + '/repos', function (repos) {
-            var forked = repos.forked,
-                notforked = repos.notforked;
-
-            outhtml += '<p>Projects I created:</p> <ul>';
-
-            $.each(notforked, function (index) {
-              outhtml += '<li><a href="' + notforked[index].html_url + '" target="_blank">' + notforked[index].name + '</a> - ' + notforked[index].description + '</li>';
-            });
-            outhtml += '</ul>';
-
-            outhtml += '<p>Other projects I have collaborated on:</p> <ul>';
-
-            $.each(forked, function (index) {
-              outhtml += '<li><a href="' + forked[index].html_url + '" target="_blank">' + forked[index].name + '</a> - ' + forked[index].description + '</li>';
-            });
-            outhtml += '</ul>';
-            $('#repos').html(outhtml);
-          });
-        }
-        else {
-        }
-
-      }
-
-      function writeCodeProject(articles) {
-        var html = '';
-        $.each(articles, function (index, article) {
-          html += '<li><p><a href="' + article.link + '">' + article.title + '</a><br/>' + article.description + '</li>';
-        });
-        $('#codeproject').empty().append(html);
-      }
-    </script>
-    <script src="github.js"></script>
-    <script src="CodeProject.js"></script>
+    <!-- All JavaScript rolled into one to minimise load time -->
+    <script src="JavaScript.js" type="text/javascript"></script>
   </body>
 </html>
