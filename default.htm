@@ -3,7 +3,8 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
     <title>Emma Burrows</title>
-     <link rel="stylesheet" type="text/css" href="common.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="common.css" />
     <![if gte IE 9]>
       <link rel="stylesheet" type="text/css" href="ie.css" />
     <![endif]>    
@@ -23,31 +24,13 @@
       
       <!-- start of #body -->
       <div id="bodydiv">
-        
-        <section>
-          <h1>
-            <img width="40" height="40" id="avatar" alt="Profile image" src="https://0.gravatar.com/avatar/686fef19a40ade1d05fd276c65fc8400?d=https%3A%2F%2Fidenticons.github.com%2F5c35f5ff0ac7b7bc39a578428ca75df4.png&amp;r=x" />
-            GitHub (<small><a id="profile" href="https://github.com/emma-burrows" target="_blank">@emma-burrows</a></small>)
-          </h1>
-          <!-- Default content in case the ajax call fails -->
-          <div class="content" id="repos" style="display: block;">
-            <strong>8 repositories:</strong> 
-            <ul>
-              <li><a href="https://github.com/emma-burrows/campyre" target="_blank">campyre</a> - A Campfire client for Android.</li>
-              <li><a href="https://github.com/emma-burrows/hanoi" target="_blank">hanoi</a> - Towers of Hanoi as a plain Java application with TDD</li>
-              <li><a href="https://github.com/emma-burrows/kidsruby" target="_blank">kidsruby</a> - KidsRuby is a Ruby programming environment meant for kids to learn and have fun!</li>
-              <li><a href="https://github.com/emma-burrows/lamarelle-db" target="_blank">lamarelle-db</a> - Customer database for La Marelle</li>
-              <li><a href="https://github.com/emma-burrows/lamarelle-main" target="_blank">lamarelle-main</a> - ASP.Net public website for La Marelle</li>
-              <li><a href="https://github.com/emma-burrows/lamarelle-mvc" target="_blank">lamarelle-mvc</a> - La Marelle's customer database as an ASP.Net MVC site</li>
-              <li><a href="https://github.com/emma-burrows/openshift-java" target="_blank">openshift-java</a> - Source code for my sample Java JBoss project on OpenShift</li>
-              <li><a href="https://github.com/emma-burrows/pepper" target="_blank">pepper</a> - A web application for a drug database</li>
-            </ul>
+        <div class="panel-group" id="accordion">
+
+        <section class="panel panel-default">
+          <div class="panel-heading">
+            <h1 data-toggle="collapse" data-parent="#accordion" href="#websites">Web sites</h1>
           </div>
-        </section>
-      
-        <section>
-          <h1>Web sites</h1>
-          <div class="content">
+          <div class="content panel-collapse collapse in" id="websites">
             <p>This is a list of websites I have contributed to, in reverse chronological order. All sites have some measure of HTML, JavaScript, and CSS3.</p>
             <ul>
             <li><a href="http://pepper.rlaidlaw.cloudbees.net/">Pepper</a><br />
@@ -70,9 +53,28 @@
           </div>
         </section>
         
-        <section>
-          <h1>Articles</h1>
-          <div class="content">
+        <section class="panel panel-default">
+          <div class="panel-heading">
+            <h1 data-toggle="collapse" data-parent="#accordion" href="#repos">
+              GitHub
+            </h1>
+          </div>
+          <div class="panel-collapse collapse" id="repos">
+            <p>
+              <img width="40" height="40" id="avatar" alt="Profile image" src="https://0.gravatar.com/avatar/686fef19a40ade1d05fd276c65fc8400?d=https%3A%2F%2Fidenticons.github.com%2F5c35f5ff0ac7b7bc39a578428ca75df4.png&amp;r=x" />
+              My GitHub repositories at <a id="profile" href="https://github.com/emma-burrows" target="_blank">@emma-burrows</a>.
+            </p>
+            <ul id="ul">
+              <li><i>Could not retrieve information dynamically, please see link above.</i></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel panel-default">
+          <div class="panel-heading">
+            <h1 data-toggle="collapse" data-parent="#accordion" href="#articles">Articles</h1>
+          </div>
+          <div class="content panel-collapse collapse" id="articles">
             <p>Articles written for <a href="http://www.codeproject.com/script/Articles/MemberArticles.aspx?amid=761050">The Code Project</a>:</p>
             <!-- Default content in case the ajax call fails -->
             <ul id="codeproject">
@@ -83,9 +85,11 @@
           </div>
         </section>
 
-        <section>
-          <h1>Code School</h1>
-          <div class="content">
+        <section class="panel panel-default">
+          <div class="panel-heading">
+            <h1 data-toggle="collapse" data-parent="#accordion" href="#courses">Code School</h1>
+          </div>
+          <div class="content panel-collapse collapse" id="courses">
             <p>Courses completed at <a href="http://www.codeschool.com/users/emma-burrows">CodeSchool</a>:</p>
             <!-- Default content in case the ajax call fails -->
             <ul id="codeschool">
@@ -96,9 +100,11 @@
           </div>
         </section>
     
-        <section>
-          <h1>Other activities</h1>
-          <div class="content">
+        <section class="panel panel-default">
+          <div class="panel-heading">
+            <h1 data-toggle="collapse" data-parent="#accordion" href="#other">Other activities</h1>
+          </div>
+          <div class="content panel-collapse collapse" id="other">
             <p>Other websites I have contributed to or where I have public accounts.</p>
             <ul>
               <li><a href="http://stackoverflow.com/users/1058028/emma-burrows">StackOverflow</a></li>
@@ -107,6 +113,7 @@
             </ul>
           </div>
         </section>
+        </div>
       </div>
     <!-- End of #body -->
     
@@ -119,6 +126,8 @@
 
     <!-- jQuery to call API and RSS feeds -->
     <script src="jquery-1.10.2.min.js"></script>
+    <!-- Bootstrap for the fancy stuff -->
+    <script src="bootstrap.min.js"></script>
     <!-- All JavaScript rolled into one to minimise load time -->
     <script src="JavaScript.js" type="text/javascript"></script>
   </body>

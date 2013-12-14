@@ -4,8 +4,6 @@
 
 $(document).ready(function () {
 
-  collapsibleH1();
-
   getGitInfo(requri, writeGitInfo);
 
   getCodeProjectArticles(codeproject, writeCodeProject);
@@ -14,40 +12,13 @@ $(document).ready(function () {
 
 });
 
-function collapsibleH1() {
-  var allH1 = $('#bodydiv section h1');
-
-  allH1
-    .prepend('<span>▲</span>')
-    .attr('title', 'Click to collapse');
-
-  $('#bodydiv section h1').click(function (event) {
-    var content = $(this).next('.content'),
-        h1 = $(this);
-
-    if (content.is(':hidden')) {
-      content.slideDown('slow');
-      h1.children('span').remove();
-      h1.prepend('<span>▲</span>')
-        .attr('title', 'Click to collapse');
-    }
-    else {
-      content.slideUp('slow');
-      h1.children('span').remove();
-      h1.prepend('<span>▼</span>')
-        .attr("title", 'Click to expand');
-    }
-    // Stop the link click from doing its normal thing
-    event.preventDefault();
-  });
-}
-
+// GITHUB
 function writeGitInfo(gitinfo) {
   $('#profile').attr('href', gitinfo.profile);
   $('#avatar').attr('src', gitinfo.avatar);
 
   if (gitinfo.reponum > 0) {
-
+    $("#repos > ul").remove();
     var outhtml = '<strong>' + gitinfo.reponum + ' repositories:</strong>';
     getGitRepos(requri + '/repos', function (repos) {
       var forked = repos.forked,
@@ -66,11 +37,8 @@ function writeGitInfo(gitinfo) {
         outhtml += '<li><a href="' + forked[index].html_url + '" target="_blank">' + forked[index].name + '</a> - ' + forked[index].description + '</li>';
       });
       outhtml += '</ul>';
-      $('#repos').html(outhtml);
+      $('#repos').append(outhtml);
     });
-  }
-  else {
-    $('#repos').html('<i>Could not retrieve any repos</i>');
   }
 }
 
@@ -174,7 +142,8 @@ function getCodeProjectArticles(url, callback) {
 function writeCodeSchool(courses) {
   var html = '';
   $.each(courses, function (index, course) {
-    html += '<li><p><a href="' + course.link + '"><img width="20px" src="' + course.badge + '" alt="' + course.title + '"/>' + course.title + '</a></li>';
+    html += '<li><p><a href="' + course.link + '"><img width="30px" src="' + course.badge + '" alt="' + course.title + '"/></a>';
+    html += ' <a href="' + course.link + '">' + course.title + '</a></li>';
   });
   $('#codeschool').empty().append(html);
 }

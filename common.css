@@ -39,8 +39,6 @@ body {
   
 }
 
-
-
 #container {
   min-height: 100%;
   position: relative;
@@ -54,13 +52,14 @@ body {
   padding-bottom: 90px; /* height of footer */
 }
 
-section {
+section, .panel-group .panel, .panel-default > .panel-heading {
   border-radius: 20px;
   background-color: #A999A9;
   background-color: rgba(255, 255, 255, 0.4);
   padding: 10px;
   margin-bottom: 10px;
   margin-left: 0px;
+  border: none;
 }
   section h1 {
     margin: 0px;
