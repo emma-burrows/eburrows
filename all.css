@@ -1,7 +1,9 @@
 body {
   -moz-box-sizing: border-box;
   font-family: Palatino,'Palatino Linotype',serif;
-
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 
   background-attachment: scroll, scroll, scroll, scroll, scroll, scroll, fixed;
   background-clip: border-box, border-box, border-box, border-box, border-box, border-box, border-box;

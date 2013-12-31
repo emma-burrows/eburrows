@@ -46,6 +46,7 @@ function writeGitInfo(gitinfo) {
 function getGitInfo(requri, callback) {
   $.ajax({
     url: requri,
+    dataType: "json",
     complete: function (xhr) {
       var gitinfo = {
         avatar: xhr.responseJSON.avatar_url,
@@ -62,6 +63,7 @@ function getGitInfo(requri, callback) {
 function getGitRepos(requri, callback) {
   $.ajax({
     url: requri,
+    dataType: "json",
     complete: function (xhr) {
       var json = xhr.responseJSON;
       forked = $.grep(json, function (el, idx) {
@@ -120,19 +122,7 @@ function getCodeProjectArticles(url, callback) {
       callback(articles);
     },
     error: function (xhr, status, error) {
-      articles = [
-        article = {
-          title: "ABC",
-          link: "http://foo",
-          description: "123"
-        },
-        article = {
-          title: "DEF",
-          link: "http://bar",
-          description: "456"
-        }
-      ]
-      callback(articles);
+      alert("error");
     }
   });
 }
