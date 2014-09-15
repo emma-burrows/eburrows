@@ -12,7 +12,7 @@ html, body {
 body {
   -moz-box-sizing: border-box;
   font-family: Palatino,'Palatino Linotype',serif;
-
+  font-size: 16px;
 
   background-attachment: scroll, scroll, scroll, scroll, scroll, scroll, fixed;
   background-clip: border-box, border-box, border-box, border-box, border-box, border-box, border-box;
@@ -55,7 +55,7 @@ body {
 section, .panel-group .panel, .panel-default > .panel-heading {
   border-radius: 20px;
   background-color: #A999A9;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
   margin-bottom: 10px;
   margin-left: 0px;
@@ -74,6 +74,13 @@ section, .panel-group .panel, .panel-default > .panel-heading {
     font-size: 0.5em;
   }
 
+.bubble {
+  border-radius: 20px;
+  background-color: #A999A9;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 5px;
+  width: 200px;
+}
  
 #heading h1 {
   font-size: 3em;

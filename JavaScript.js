@@ -31,7 +31,7 @@ function writeGitInfo(gitinfo) {
       });
       outhtml += '</ul>';
 
-      outhtml += '<p>Other projects I have collaborated on:</p> <ul>';
+      outhtml += '<p>Other projects I have collaborated on or forked for training or research purposes:</p> <ul>';
 
       $.each(forked, function (index) {
         outhtml += '<li><a href="' + forked[index].html_url + '" target="_blank">' + forked[index].name + '</a> - ' + forked[index].description + '</li>';
