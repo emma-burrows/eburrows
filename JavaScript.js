@@ -1,14 +1,8 @@
-﻿var requri = 'https://api.github.com/users/emma-burrows',
-    codeproject = 'http://www.codeproject.com/WebServices/ArticleRSS.aspx?amid=761050',
-    codeschool = 'https://www.codeschool.com/users/124271.json';
+﻿var requri = 'https://api.github.com/users/emma-burrows';
 
 $(document).ready(function () {
 
   getGitInfo(requri, writeGitInfo);
-
-  getCodeProjectArticles(codeproject, writeCodeProject);
-
-  getCompletedCodeSchool(codeschool, writeCodeSchool);
 
 });
 
@@ -78,83 +72,6 @@ function getGitRepos(requri, callback) {
         notforked: notforked
       }
       callback(repos);
-    }
-  });
-}
-
-
-// CODE PROJECT
-function writeCodeProject(articles) {
-  var html = '';
-  $.each(articles, function (index, article) {
-    html += '<li><p><a href="' + article.link + '">' + article.title + '</a><br/>' + article.description + '</li>';
-  });
-  $('#codeproject').empty().append(html);
-}
-
-// Retrieves CodeProject articles by feeding an author RSS 
-// into the Google Feed API - this is to prevent the cross-domain
-// issues I experienced when I first tested this in Firefox behind 
-// a corporate proxy
-// However, even with this method, either CodeProject or Google occasionally 
-// lop off the ?amid=xxx, so that we only get the latest article feed - 
-// so I need to check that the articles are actually mine
-function getCodeProjectArticles(url, callback) {
-  $.ajax({
-    url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
-    dataType: 'json',
-    success: function (data) {
-      var feed = data.responseData.feed;
-
-      var articles = [];
-      $(feed.entries).each(function (index, article) {
-        if (/Emma Burrows/.test(article.author)) {
-          article = {
-            title: article.title,
-            link: article.link,
-            description: article.content,
-            pubDate: article.pubDate,
-            author: article.author
-          }
-          articles.push(article);
-        }
-      });
-      callback(articles);
-    },
-    error: function (xhr, status, error) {
-      alert("error");
-    }
-  });
-}
-
-
-// CODE SCHOOL
-function writeCodeSchool(courses) {
-  var html = '';
-  $.each(courses, function (index, course) {
-    html += '<li><p><a href="' + course.link + '"><img width="30px" src="' + course.badge + '" alt="' + course.title + '"/></a>';
-    html += ' <a href="' + course.link + '">' + course.title + '</a></li>';
-  });
-  $('#codeschool').empty().append(html);
-}
-
-// Retrieves CodeSchool completed course 
-function getCompletedCodeSchool(url, callback) {
-  $.ajax({
-    url: url,
-    dataType: 'jsonp',
-    success: function (codeschool) {
-      var courses = codeschool.courses.completed;
-      var completed = [];
-      $(courses).each(function (index, course) {
-        course = {
-          title: course.title,
-          badge: course.badge,
-          link: course.url
-        }
-        completed.push(course);
-      });
-      callback(completed);
     }
   });
 }
